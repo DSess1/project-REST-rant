@@ -1,9 +1,11 @@
 
 require('dotenv').config()
-const Port = process.env.Port
+//const Port = process.env.Port
 const express = require('express')
 const app = express()
 
+
+//Express settings
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
