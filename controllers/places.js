@@ -1,34 +1,36 @@
+
 const router = require('express').Router()
+const places = require('../models/places.js')
 
+
+//New
 router.get('/new', (req, res) => {
-    res.render('places/new')
-
-  })
+     res.render('places/new')
+})
 
 // GET Places
+//app.get('/', (req, res) => {
+//  res.render('places/index')
+//})
 
-router.get('/places/:id', (req, res) => {
-  
+//Home
+router.get('/:id', (req, res) => {
+  res.render('places/home')
+})
 
-module.exports = router
 
-    let places = [{
-        name: 'H-Thai-ML',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
-        pic: '/images/images/max-griss-otLqpb9LK70-unsplash.jpg'
-      },
-       {
-        name: 'Coding Cat Cafe',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
-        pic: '/images/images/yeh-xintong-go3DT3PpIw4-unsplash.jpg'  
-      }]
-      
-    res.render('places/index', {places})
-    
+
+
+//Index
+router.get('/index', (req, res) =>{
+  res.render('places/index')
 })
 
 module.exports = router
+
+  
+      
+    
+
+
+

@@ -19,7 +19,7 @@ app.use('/places', require('./controllers/places'))
 app.get('/', (req, res) =>{
     res.render('home')
 })
-//404 page
+//error404 page
 app.get('*', (req, res) => {
     res.render('error404')
 })
