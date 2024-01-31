@@ -8,10 +8,6 @@ router.get('/new', (req, res) => {
      res.render('places/new')
 })
 
-// GET Places
-//app.get('/', (req, res) => {
-//  res.render('places/index')
-//})
 
 //Home
 router.get('/:id', (req, res) => {
@@ -19,12 +15,10 @@ router.get('/:id', (req, res) => {
 })
 
 
-
-
 //Index
-router.get('/index', (req, res) =>{
-  res.render('places/index')
-})
+router.get('/', (req, res) => {
+  res.render('places/index', { places: places });
+});
 
 module.exports = router
 

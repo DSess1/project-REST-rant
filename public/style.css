@@ -1,7 +1,13 @@
 
 
-h1 {
+ h1 {
     text-align: center;
     color: cornflowerblue;
   }
-  
+
+
+  .blue-button {
+    background-color: cornflowerblue;
+    color: cornflowerblue/* Ensures white text is readable on the cornflower blue background */
+    /* Add any additional styling as needed */
+}

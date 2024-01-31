@@ -3,7 +3,7 @@ const React = require('react')
 const Def = require('../default')
 
 function index (data) {
-        let placesFormatted = data.places.map((place,) => {
+        let placesFormatted = data.places.map((place) => {
   return (
     <div className="col-sm-6">
       <h2>{place.name}</h2>
@@ -19,6 +19,9 @@ function index (data) {
 })
   return (
     <Def>
+      <head>
+      <link rel="stylesheet" href="/css/style.css"/>
+      </head>
         <main>
             <h1>Places to Rant or Rave About</h1>
             <div className="row">

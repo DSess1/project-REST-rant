@@ -1,6 +1,5 @@
-
+//Modules and Globals
 require('dotenv').config()
-//const Port = process.env.Port
 const express = require('express')
 const app = express()
 
