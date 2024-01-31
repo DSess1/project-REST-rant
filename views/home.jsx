@@ -20,7 +20,7 @@ function home () {
            </div>
            
             <a href="/places">
-                <button className="btn-primary cornflowerblue">Places Page</button>
+                <button className="btn-primary">Places Page</button>
            </a>
            
        </main>
