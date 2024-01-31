@@ -12,13 +12,13 @@ function Def (html) {
             <nav>
               <ul>
                 <li>
-                  <a href="/">Home</a>
+                  <a href="/">Home</a>{/* link to the home page */}
                 </li>
                 <li>
-                 <a href="/places">Places</a>
+                 <a href="/places">Places</a>{/* link to the index page (/places) */}
                 </li>
                 <li>
-                 <a href="/places/new">Add Place</a>
+                 <a href="/places/new">Add Place</a>{/* link to new form page (/places/new)  */}
                 </li>
               </ul>
             </nav>
