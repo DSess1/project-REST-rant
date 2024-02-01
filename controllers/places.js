@@ -34,13 +34,27 @@ router.get('/:id', (req, res) => {
 //Index
 router.get('/', (req, res) => {
   res.render('places/index', { places: places });
+
+
+})
+//EDIT ROUTE
+router.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+    res.render('places/edit', { place: places[id] })
+  }
 })
 
 
 
-
 router.post('/', (req, res) => {
-  console.log(req.body)
+ // console.log(req.body)
   if (!req.body.pic) {
     // Default image if one is not provided
     req.body.pic = 'http://placekitten.com/400/400'
@@ -70,7 +84,26 @@ router.delete('/:id', (req, res) => {
   }
 })
 
+router.get('/', (req, res) => {
+let places = [{
+  name: 'H-Thai-ML',
+  city: 'Seattle',
+  state: 'WA',
+  cuisines: 'Thai, Pan-Asian',
+  pic: 'images/images/emy-XoByiBymX20-unsplash (1).jpg'
 
+  
+},
+ {
+  name: 'Coding Cat Cafe',
+  city: 'Phoenix',
+  state: 'AZ',
+  cuisines: 'Coffee, Bakery',
+  pic: 'images/images/mink-mingle-qZ5lPCPvdXE-unsplash.jpg'  
+}]
+ 
+  res.render('places/index',{places})
+})
 
 module.exports = router
 
