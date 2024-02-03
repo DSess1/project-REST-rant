@@ -1,4 +1,4 @@
-
+const express = require('express')
 const router = require('express').Router()
 const places = require('../models/places.js')
 
@@ -31,12 +31,16 @@ router.get('/:id', (req, res) => {
 })
 
 
+
+
 //Index
 router.get('/', (req, res) => {
-  res.render('places/index', { places: places });
-
-
+  res.render('places/index', {places})
 })
+//{ places: places })
+
+
+
 //EDIT ROUTE
 router.get('/:id/edit', (req, res) => {
   let id = Number(req.params.id)
@@ -50,6 +54,8 @@ router.get('/:id/edit', (req, res) => {
     res.render('places/edit', { place: places[id] })
   }
 })
+
+
 
 //PUT
 router.put('/:id', (req, res) => {
@@ -75,7 +81,7 @@ router.put('/:id', (req, res) => {
 
       // Save the new data into places[id]
       places[id] = req.body
-      res.redirect(`/places/${id}`)
+      res.redirect('/places/${id}')
   }
 })
 
@@ -114,26 +120,29 @@ router.delete('/:id', (req, res) => {
 })
 
 
-router.get('/', (req, res) => {
-let places = [{
-  name: 'H-Thai-ML',
-  city: 'Seattle',
-  state: 'WA',
-  cuisines: 'Thai, Pan-Asian',
-  pic: 'images/images/emy-XoByiBymX20-unsplash (1).jpg'
 
+.get('/', (req, res) => {
+  let places = [{
+   name: 'H-Thai-ML',
+    city: 'Seattle',
+   state: 'WA',
+    cuisines: 'Thai, Pan-Asian',
+    pic: '/images/images/emy-XoByiBymX20-unsplash (1).jpg'
   
-},
- {
-  name: 'Coding Cat Cafe',
-  city: 'Phoenix',
-  state: 'AZ',
-  cuisines: 'Coffee, Bakery',
-  pic: 'images/images/mink-mingle-qZ5lPCPvdXE-unsplash.jpg'  
-}]
- 
-  res.render('places/index',{places})
-})
+    
+  },
+  {
+    name: 'Coding Cat Cafe',
+    city: 'Phoenix',
+    state: 'AZ',
+    cuisines: 'Coffee, Bakery',
+    pic: '/images/images/mink-mingle-qZ5lPCPvdXE-unsplash.jpg'  
+  }]
+   
+    res.render('places/index',{places})
+  })                               
+
+
 
 module.exports = router
 

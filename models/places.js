@@ -5,7 +5,7 @@ module.exports = [{
     city: 'Seattle',
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
-    pic: 'images/images/max-griss-YpfRCe5lda0-unsplash.jpg'
+    pic: 'images/images/max-griss-YpfRCe5lda0-unsplash (1).jpg'
     
   },
    {
@@ -13,8 +13,8 @@ module.exports = [{
     city: 'Phoenix',
     state: 'AZ',
     cuisines: 'Coffee, Bakery',
-    pic: 'images/images/mink-mingle-qZ5lPCPvdXE-unsplash.jpg'  
-  }]
+    pic: 'images/images/mink-mingle-qZ5lPCPvdXE-unsplash.jpg' 
+ }]
   
 
 
