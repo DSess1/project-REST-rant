@@ -5,8 +5,7 @@ module.exports = [{
     city: 'Seattle',
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
-    pic: 'images/images/emy-XoByiBymX20-unsplash (1).jpg'
-  
+    pic: 'images/images/max-griss-YpfRCe5lda0-unsplash.jpg'
     
   },
    {
