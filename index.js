@@ -10,7 +10,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))//to let Express know the name of the static folder
 app.use(express.urlencoded({ extended: true }))
-app.use(methodOverride('metod'))
+app.use(methodOverride('_method'))
 
 
 //Controllers and Routers

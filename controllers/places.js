@@ -81,7 +81,7 @@ router.put('/:id', (req, res) => {
 
       // Save the new data into places[id]
       places[id] = req.body
-      res.redirect('/places/${id}')
+      res.redirect(`/places/${id}`)
   }
 })
 
@@ -89,7 +89,7 @@ router.put('/:id', (req, res) => {
 
 //POST
 router.post('/', (req, res) => {
- // console.log(req.body)
+  console.log(req.body)
   if (!req.body.pic) {
     // Default image if one is not provided
     req.body.pic = 'http://placekitten.com/400/400'

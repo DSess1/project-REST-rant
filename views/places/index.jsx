@@ -8,7 +8,7 @@ function index (data) {
     <div key={index} className="col-sm-6">
       <h2>
         <a href={`/places/${index}`} >
-        {place.name}
+      {place.name}   
         </a>
         </h2>
       <p className="text-center">
