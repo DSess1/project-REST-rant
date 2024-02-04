@@ -1,10 +1,6 @@
 
 const Place = require('../models/places.js')
 const db = require('../models')
-
-
-
-
 const router = require('express').Router()
 
 
@@ -29,15 +25,10 @@ router.get('/:id', (req, res) => {
 })
 
 
-
-
-
 //Home
 router.get('/:id', (req, res) => {
   res.render('places/home')
 })
-
-
 
 
 //Index/Get Places
