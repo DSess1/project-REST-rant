@@ -11,15 +11,15 @@ function Def (html) {
               <link rel="stylesheet" href="/css/style.css"/> 
           </head>
           <body>
-              <nav className="navbar navbar-expand- 1g justify-content-center">
+              <nav className="navbar navbar-expand-1g justify-content-center">
                   <ul className="navbar-nav">
                       <li className="nav-item">
                           <a className="nav-link" href="/">Home</a>
                       </li>
-                      <li className="nav-item">
+                     {/* <li className="nav-item">
                           <a className="nav-link" href="/places">Places</a>
-                      </li>
-                      <li className="nav-item">
+                       </li> */}
+                      <li className="nav-item">  
                           <a className="nav-link" href="/places/new">Add Place</a>
                       </li>
                   </ul>
