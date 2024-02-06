@@ -3,8 +3,6 @@ const Place = require('../models/places.js')
 const db = require('../models')
 const router = require('express').Router()
 
-
-
 //New
 router.get('/new', (req, res) => {
      res.render('places/new')
@@ -86,26 +84,26 @@ router.delete('/:id/rant/:rant:Id', (req, res) => {
 
 
 
-.get('/', (req, res) => {
-  let places = [{
-   name: 'H-Thai-ML',
-    city: 'Seattle',
-   state: 'WA',
-    cuisines: 'Thai, Pan-Asian',
-    pic: '/images/images/emy-XoByiBymX20-unsplash (1).jpg'
+//.get('/', (req, res) => {
+ // let places = [{
+ //  name: 'H-Thai-ML',
+ //   city: 'Seattle',
+ //  state: 'WA',
+ //   cuisines: 'Thai, Pan-Asian',
+ //   pic: '/images/images/emy-XoByiBymX20-unsplash (1).jpg'
   
     
-  },
-  {
-    name: 'Coding Cat Cafe',
-    city: 'Phoenix',
-    state: 'AZ',
-    cuisines: 'Coffee, Bakery',
-    pic: '/images/images/mink-mingle-qZ5lPCPvdXE-unsplash.jpg'  
-  }]
+  //},
+ // {
+ //   name: 'Coding Cat Cafe',
+ //   city: 'Phoenix',
+  //  state: 'AZ',
+  //  cuisines: 'Coffee, Bakery',
+  //  pic: '/images/images/mink-mingle-qZ5lPCPvdXE-unsplash.jpg'  
+  //}]
    
-    res.render('places/index',{places})
-  })                               
+ //   res.render('places/index',{places})
+ // })                               
 
 
 

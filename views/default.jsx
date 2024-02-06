@@ -11,7 +11,7 @@ function Def (html) {
               <link rel="stylesheet" href="/css/style.css"/> 
           </head>
           <body>
-              <nav className="navbar navbar-expand-1g justify-content-center">
+              <nav className="navbar navbar-expand- 1g justify-content-center">
                   <ul className="navbar-nav">
                       <li className="nav-item">
                           <a className="nav-link" href="/">Home</a>
