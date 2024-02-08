@@ -1,17 +1,16 @@
 //Modules and Globals
+require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
-
-
+const app = express()
+//module.exports.Place = require('./places')
 
 //DEPENDENCIES
 const methodOverride = require('method-override')
 
 
 //CONFIGURATION
-require('dotenv').config()
 const PORT = process.env.PORT
-const app = express()
 
 
 //Express settings
@@ -37,7 +36,9 @@ app.get('*', (req, res) => {
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => { console.log('connected to mongo: ', process.env.MONGO_URI)
  })
- //module.exports.Place = require('./places')
+ module.exports.Place = require('./places')
+
 
 //Listen for Connections
 app.listen(process.env.PORT)
+
