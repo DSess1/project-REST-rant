@@ -16,9 +16,9 @@ function Def (html) {
                       <li className="nav-item">
                           <a className="nav-link" href="/">Home</a>
                       </li>
-                     {/* <li className="nav-item">
+                      <li className="nav-item">
                           <a className="nav-link" href="/places">Places</a>
-                       </li> */}
+                       </li>
                       <li className="nav-item">  
                           <a className="nav-link" href="/places/new">Add Place</a>
                       </li>

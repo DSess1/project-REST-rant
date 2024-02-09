@@ -33,12 +33,16 @@ app.get('*', (req, res) => {
     res.render('error404')
 })
 
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
-.then(() => { console.log('connected to mongo: ', process.env.MONGO_URI)
- })
- module.exports.Place = require('./places')
 
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('Connected to MongoDB:', process.env.MONGO_URI)
+        // Listen for connections after successful database connection
+    })
+    .catch(error => {
+        console.error('Error connecting to MongoDB:', error)
+    })
 
-//Listen for Connections
-app.listen(process.env.PORT)
-
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`)
+    })
