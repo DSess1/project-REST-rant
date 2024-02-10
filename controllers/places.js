@@ -80,7 +80,7 @@ router.put('/:id', (req, res) => {
     })
 })
 
-
+//POST
 router.post('/:id/comment', (req, res) => {
   console.log('post comment', req.body)
   if (req.body.author === '') { req.body.author = undefined }
@@ -108,10 +108,11 @@ router.post('/:id/comment', (req, res) => {
 })
 
 // DELETE
-router.delete('/:id', (req, res) => {
+router.delete('/:id/comment/:commentId', (req, res) => {
   db.Place.findByIdAndDelete(req.params.id)
     .then(() => {
-      res.redirect('/places')
+      console.log('Success')
+      res.redirect('/places/${req.params.id}')
     })
     .catch(err => {
       console.log('err', err)
