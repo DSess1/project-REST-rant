@@ -80,19 +80,35 @@ router.put('/:id', (req, res) => {
     })
 })
 
-//POST
+
+//Delete
+router.delete('/:id', (req, res) => {
+  db.Place.findByIdAndDelete(req.params.id)
+      .then(() => {
+          res.redirect('/places')
+      })
+      .catch(err => {
+          console.log('err', err)
+          res.render('error404')
+      })
+})
+
+
+
+
+//POST   Comment Route
 router.post('/:id/comment', (req, res) => {
   console.log('post comment', req.body)
   if (req.body.author === '') { req.body.author = undefined }
-  req.body.rant = req.body.rant ? true : false
+  req.body.rant = req.body.rant ? true : false      
   db.Place.findById(req.params.id)
       .then(place => {
           db.Comment.create(req.body)
-              .then(comment => {
-                  place.comments.push(comment.id)
+              .then(comment => {            
+                  place.comments.push(comment.id)   
                   place.save()
                       .then(() => {
-                          res.redirect(`/places/${req.params.id}`)
+                          res.redirect(`/places/${req.params.id}`)     
                       })
                       .catch(err => {
                           res.render('error404')
@@ -107,17 +123,20 @@ router.post('/:id/comment', (req, res) => {
       })
 })
 
-// DELETE
+
+
+
+// DELETE route for deleting comments
 router.delete('/:id/comment/:commentId', (req, res) => {
-  db.Place.findByIdAndDelete(req.params.id)
-    .then(() => {
-      console.log('Success')
-      res.redirect('/places/${req.params.id}')
-    })
-    .catch(err => {
-      console.log('err', err)
-      res.render('error404')
-    })
+  db.Comment.findByIdAndDelete(req.params.commentId)
+      .then(() => {
+          console.log('Success')
+          res.redirect(`/places/${req.params.id}`)
+      })
+      .catch(err => {
+          console.log('err', err)
+          res.render('error404')
+      })
 })
 
 

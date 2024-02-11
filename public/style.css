@@ -1,4 +1,15 @@
 
+body {
+  background-color: cornflowerblue;
+  text-align: center;
+}
+
+h3 {
+
+    text-align: center;
+    color: cornflowerblue;
+}
+
 
 nav {
   background-color: cornflowerblue;
@@ -42,8 +53,3 @@ img {
 
 }
 
-  #pic {
-
-    width:400px;
-    height:400px;
-  }

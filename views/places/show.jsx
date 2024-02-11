@@ -3,7 +3,7 @@ const Def = require('../default')
 
 
 function show (data) {
-      let comments = (
+      let comments = (   
         <h3 className="inactive">
           No comments yet!
         </h3>
@@ -13,7 +13,7 @@ function show (data) {
           Not yet rated
         </h3>
       )
-      if (data.place.comments.length) {
+      if (data.place.comments.length) {           {/*star rating*/}
         let sumRatings = data.place.comments.reduce((tot, c) => {
           return tot + c.stars
         }, 0)
@@ -27,7 +27,7 @@ function show (data) {
             {stars} stars
           </h3>
         )
-        comments = data.place.comments.map(c => {
+        comments = data.place.comments.map(c => {         
           return (
             <div className="border col-sm-4">
             <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
